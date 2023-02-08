@@ -6,7 +6,7 @@ public class Main {
     
     MergeSort m = new MergeSort();
     
-    Integer[] array = {10, 50, 1, 0, 40, 15, 64};
+    int[] array = {10, 50, 1, 0, 40, 15, 64};
         
     m.mergeSort(array);
         

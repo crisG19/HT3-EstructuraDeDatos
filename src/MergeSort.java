@@ -1,13 +1,13 @@
-public class MergeSort<T> implements Comparable<MergeSort<T>> {
+public class MergeSort {
     
-    public static void mergeSort(Integer[] array) {
+    public void mergeSort(int[] array) {
 		
 		int length = array.length;
 		if (length <= 1) return; //base case
 		
 		int middle = length / 2;
-		Integer[] leftArray = new Integer[middle];
-		Integer[] rightArray = new Integer[length - middle];
+		int[] leftArray = new int[middle];
+		int[] rightArray = new int[length - middle];
 		
 		int i = 0; //left array
 		int j = 0; //right array
@@ -35,15 +35,7 @@ public class MergeSort<T> implements Comparable<MergeSort<T>> {
 		//check the conditions for merging
 		while(l < leftSize && r < rightSize) {
             
-    	if (leftArray[l].compareTo(rightArray)<-1) {
-                array[i] = leftArray[l];
-				i++;
-				l++;
-            }else {
-				array[i] = rightArray[r];
-				i++;
-				r++;
-			}
+    	
 			
 			if(leftArray[l] < rightArray[r]) {
 				array[i] = leftArray[l];
@@ -67,10 +59,4 @@ public class MergeSort<T> implements Comparable<MergeSort<T>> {
 				r++;
 		}
 	}
-
-	@Override
-	public int compareTo(MergeSort o) {
-		return 0;
-	}
-
 }
